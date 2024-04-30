@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "bryan-brittos-q4-uDBLGua4-unsplash.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "bryan-brittos-q4-uDBLGua4-unsplash 1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "bryan-brittos-q4-uDBLGua4-unsplash 2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

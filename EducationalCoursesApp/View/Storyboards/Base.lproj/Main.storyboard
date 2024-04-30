@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0m4-7L-gGj">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Course List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CourseListViewController" id="BYZ-38-t0r" customClass="CourseListViewController" customModule="EducationalCoursesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CQM-Zz-iFo">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="vlo-hs-Caf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="J2a-oZ-V5I"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CQM-Zz-iFo" secondAttribute="bottom" id="81Q-FF-dB8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CQM-Zz-iFo" secondAttribute="trailing" id="OEF-1W-tGE"/>
+                            <constraint firstItem="CQM-Zz-iFo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WRJ-lC-Rb8"/>
+                            <constraint firstItem="CQM-Zz-iFo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y0E-sX-aW8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sx1-Of-kee"/>
+                    <connections>
+                        <outlet property="courseListTableView" destination="CQM-Zz-iFo" id="wAa-pZ-JfF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.4122137404579" y="3.5211267605633805"/>
+        </scene>
+        <!--Course Detail View Controller-->
+        <scene sceneID="f2D-M2-gJy">
+            <objects>
+                <viewController storyboardIdentifier="CourseDetailViewController" id="3rS-Gv-MFU" customClass="CourseDetailViewController" customModule="EducationalCoursesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="we0-ba-RGS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="wUa-uB-FGX">
+                                <rect key="frame" x="0.0" y="59" width="393" height="699"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3rS-Gv-MFU" id="fma-1m-cvq"/>
+                                    <outlet property="delegate" destination="3rS-Gv-MFU" id="LT8-2w-fSE"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NOM-S0-RIQ">
+                                <rect key="frame" x="20" y="768" width="353" height="40"/>
+                                <color key="backgroundColor" name="ColorCourseRecommendations"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q1a-8W-tLT"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="enrollmentBtnAction:" destination="3rS-Gv-MFU" eventType="touchUpInside" id="nTB-bH-NmX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QHy-Iv-5sD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wUa-uB-FGX" firstAttribute="leading" secondItem="QHy-Iv-5sD" secondAttribute="leading" id="18Z-dY-zHt"/>
+                            <constraint firstItem="NOM-S0-RIQ" firstAttribute="leading" secondItem="QHy-Iv-5sD" secondAttribute="leading" constant="20" id="OcV-Wq-47W"/>
+                            <constraint firstItem="QHy-Iv-5sD" firstAttribute="bottom" secondItem="wUa-uB-FGX" secondAttribute="bottom" id="P23-E6-Siw"/>
+                            <constraint firstItem="NOM-S0-RIQ" firstAttribute="top" secondItem="wUa-uB-FGX" secondAttribute="bottom" constant="10" id="UQS-qA-EFI"/>
+                            <constraint firstItem="NOM-S0-RIQ" firstAttribute="centerX" secondItem="we0-ba-RGS" secondAttribute="centerX" id="efl-9d-Rx4"/>
+                            <constraint firstItem="wUa-uB-FGX" firstAttribute="top" secondItem="QHy-Iv-5sD" secondAttribute="top" id="g3r-We-OZv"/>
+                            <constraint firstItem="QHy-Iv-5sD" firstAttribute="trailing" secondItem="wUa-uB-FGX" secondAttribute="trailing" id="odp-xJ-NUA"/>
+                            <constraint firstItem="QHy-Iv-5sD" firstAttribute="bottom" secondItem="NOM-S0-RIQ" secondAttribute="bottom" constant="10" id="qct-bT-ZxO"/>
+                            <constraint firstItem="QHy-Iv-5sD" firstAttribute="trailing" secondItem="NOM-S0-RIQ" secondAttribute="trailing" constant="20" id="t9l-xu-i6X"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="P23-E6-Siw"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="courseDetailTableView" destination="wUa-uB-FGX" id="Ori-fW-dhz"/>
+                        <outlet property="enrollmentButton" destination="NOM-S0-RIQ" id="uTB-WF-sxx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhs-hH-2kM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1870.9923664122136" y="3.5211267605633805"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="RjF-SX-mxe">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="ocN-fb-j4a" customClass="ProfileViewController" customModule="EducationalCoursesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4RE-TF-DSK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Blu-Mr-N9d">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ocN-fb-j4a" id="Z3j-Yf-Nx8"/>
+                                    <outlet property="delegate" destination="ocN-fb-j4a" id="Yh0-ya-TMg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x95-rt-ni5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x95-rt-ni5" firstAttribute="trailing" secondItem="Blu-Mr-N9d" secondAttribute="trailing" id="cFe-V4-aIS"/>
+                            <constraint firstItem="Blu-Mr-N9d" firstAttribute="top" secondItem="x95-rt-ni5" secondAttribute="top" id="cXl-Lb-ppl"/>
+                            <constraint firstItem="Blu-Mr-N9d" firstAttribute="leading" secondItem="x95-rt-ni5" secondAttribute="leading" id="n4x-xy-0zv"/>
+                            <constraint firstItem="x95-rt-ni5" firstAttribute="bottom" secondItem="Blu-Mr-N9d" secondAttribute="bottom" id="sUW-tc-gC5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="profileTableView" destination="Blu-Mr-N9d" id="duI-1N-B1U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KgD-ew-qQq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2578" y="-199"/>
+        </scene>
+        <!--Enrollment List View Controller-->
+        <scene sceneID="Lbx-U6-jPQ">
+            <objects>
+                <viewController storyboardIdentifier="EnrollmentListViewController" id="4Bj-ZD-5yW" customClass="EnrollmentListViewController" customModule="EducationalCoursesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uGs-w7-wjd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3yf-eD-hrt">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4Bj-ZD-5yW" id="QCK-Pb-iA3"/>
+                                    <outlet property="delegate" destination="4Bj-ZD-5yW" id="53i-eW-qUq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Afj-c8-bJD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Afj-c8-bJD" firstAttribute="bottom" secondItem="3yf-eD-hrt" secondAttribute="bottom" id="7Of-XN-DRo"/>
+                            <constraint firstItem="3yf-eD-hrt" firstAttribute="leading" secondItem="Afj-c8-bJD" secondAttribute="leading" id="BAl-fG-bUJ"/>
+                            <constraint firstItem="3yf-eD-hrt" firstAttribute="top" secondItem="Afj-c8-bJD" secondAttribute="top" id="Srr-ze-cpO"/>
+                            <constraint firstItem="Afj-c8-bJD" firstAttribute="trailing" secondItem="3yf-eD-hrt" secondAttribute="trailing" id="pNa-UK-BDh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enrollmentsTableView" destination="3yf-eD-hrt" id="VBh-Cq-88I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyN-06-m7z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3444" y="-176"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DbK-as-6Fy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0m4-7L-gGj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0PZ-bJ-The">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="74A-iM-C0t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Jx-tb-af5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139.69465648854961" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="ColorCourseRecommendations">
+            <color red="0.23137254901960785" green="0.42745098039215684" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
