@@ -9,7 +9,7 @@ This app is developed using Swift and UIKit. Also contains basic Unit test and U
 - [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
--[Recommendation Algoritms](#Recommendation-Algoritms)
+- [Recommendation Algoritms](#Recommendation-Algoritms)
   - [Based on interest](#Based-on-interest)
   - [Based on previous enrollments](#Based-on-previous-enrollments)
   - [Based on Popularity](#Based-on-Popularity)
