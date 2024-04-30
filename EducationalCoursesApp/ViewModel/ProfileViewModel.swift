@@ -25,7 +25,7 @@ class ProfileViewModel {
     var coursesArr = [CourseModel]()
     
     let profileFunctionalitiesArr: [Profile] = [Profile(color: UIColor(named: "ColorEnrollments")!,
-                                                        functionality: .enrollments("Enrollments")),
+                                                        functionality: .enrollments(StaticData.AppStrings.enrollments)),
                                                 Profile(color: UIColor(named: "ColorCourseRecommendations")!,
-                                                        functionality: .courseRecommendations("Recommendations"))]
+                                                        functionality: .courseRecommendations(StaticData.AppStrings.recommendations))]
 }

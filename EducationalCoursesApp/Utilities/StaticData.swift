@@ -15,6 +15,7 @@ struct StaticData {
         static let courseDetail = "Course Detail"
         static let videoModules = "Video Modules"
         static let enrollments = "Enrollments"
+        static let recommendations = "Recommendations"
     }
     
     // storyboard Identifiers to help get/change them at one place
