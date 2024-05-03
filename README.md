@@ -80,7 +80,8 @@ Before you begin, ensure you have the following prerequisites:
 2. Sentiment analysis can be done using Positive/Negative sentiments.
 
 ### Dynamic Resource Allocation
-    Limited resources allocation can be done with following things-
+
+    - Limited resources allocation can be done with following things-
 1. First come First serve principle can be used at a server side
 2. We can open 1/2 course per day for each user. So that load balancing at server side.
 3. If user watch first full video-> then only enable second video
