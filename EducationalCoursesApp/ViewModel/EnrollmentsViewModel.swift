@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Combine
 
 protocol EnrollmentsViewModelProtocol {
     func selectCourse(showEnrollment: Bool, course: CourseModel, completion: (UIViewController) -> Void)
